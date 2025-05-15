@@ -72,9 +72,7 @@ function handleRemoval(ticket) {
 toolBoxColors.forEach(function (colorElem) {
   colorElem.addEventListener("click", function () {
     const allTicktes = document.querySelectorAll(".ticket-cont");
-    // console.log(allTicktes)
     const selectedColor = colorElem.classList[0];
-    // console.log(selectedColor)
 
     allTicktes.forEach(function (ticket) {
       const tikcetColorBand = ticket.querySelector(".ticket-color");
@@ -102,8 +100,8 @@ function handleColor(ticket) {
   console.log(ticketColorBand);
   ticketColorBand.addEventListener("click", function () {
     const currentColor = ticketColorBand.style.backgroundColor;
-    console.log(currentColor); // lightpink
-    const ticketIdx = getIdx(id); // 2
+    console.log(currentColor);
+    const ticketIdx = getIdx(id);
 
     let currentColorIdx = colors.findIndex(function (color) {
       return currentColor === color;
@@ -143,8 +141,6 @@ function handleLock(ticket) {
     updateLocalStorage();
   });
 }
-
-// removal of tickets
 
 // generating a Ticket
 
